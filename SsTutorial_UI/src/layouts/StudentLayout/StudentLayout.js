@@ -1,0 +1,25 @@
+import React from 'react';
+import '../../App.css';
+import { FaSignOutAlt, FaCog, FaUserCircle } from 'react-icons/fa';
+import Header from '../Header';
+import Footer from '../Footer';
+import SideBar from '../SideBar';
+import { Outlet } from 'react-router-dom';
+
+const StudentLayout = () => {
+  return (
+    <div className="dashboard-container">
+    <Header/>
+    <div className="dashboard-body">
+     <SideBar />
+      <main className="main-content">
+        <h2></h2>
+        <Outlet />
+      </main>
+    </div>
+  <Footer />
+  </div>
+  );
+};
+
+export default StudentLayout;
