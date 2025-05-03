@@ -1,0 +1,6 @@
+@JWTTokendemo_HostAddress = http://localhost:5031
+
+GET {{JWTTokendemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
