@@ -1,24 +1,22 @@
 import React from 'react';
 import '../../App.css';
-import { FaSignOutAlt, FaCog, FaUserCircle } from 'react-icons/fa';
+import { Outlet } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
 import SideBar from '../SideBar';
-import { Outlet } from 'react-router-dom';
 
 const StudentLayout = () => {
   return (
     <div className="dashboard-container">
-    <Header/>
-    <div className="dashboard-body">
-     <SideBar />
-      <main className="main-content">
-        <h2></h2>
-        <Outlet />
-      </main>
+      <Header showStudentDropdowns={true} />
+      <div className="dashboard-body">
+        <SideBar />
+        <main className="main-content">
+          <Outlet />
+        </main>
+      </div>
+      <Footer />
     </div>
-  <Footer />
-  </div>
   );
 };
 
